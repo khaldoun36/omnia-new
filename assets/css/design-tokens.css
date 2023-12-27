@@ -1,0 +1,100 @@
+/* Import the reset and atomic classes files*/
+@import "./reset.css";
+@import "../css/atomic-classes.css";
+
+/* Import local fonts */
+@font-face {
+  font-family: InterVariable;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/InterVariable.woff2") format("woff2");
+}
+
+/* Variable fonts usage: */
+
+html,
+body,
+#__nuxt {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "InterVariable", sans-serif;
+    font-optical-sizing: auto;
+  }
+}
+
+:root {
+  /* Colors tokens */
+  --clr-primary-50: 40 100% 96%;
+  --clr-primary-100: 40 100% 92%;
+  --clr-primary-200: 37 100% 83%;
+  --clr-primary-300: 36 100% 72%;
+  --clr-primary-400: 32 100% 61%;
+  --clr-primary-500: 30 100% 52%;
+  --clr-primary-600: 26 95% 48%;
+  --clr-primary-700: 23 93% 40%;
+  --clr-primary-800: 20 84% 34%;
+  --clr-primary-900: 20 79% 28%;
+  --clr-primary-950: 18 86% 15%;
+
+  --clr-neutral-50: 0 0% 98%;
+  --clr-neutral-100: 240 5% 96%;
+  --clr-neutral-200: 240 6% 90%;
+  --clr-neutral-300: 240 5% 84%;
+  --clr-neutral-400: 240 5% 65%;
+  --clr-neutral-500: 240 4% 46%;
+  --clr-neutral-600: 240 5% 34%;
+  --clr-neutral-700: 240 5% 26%;
+  --clr-neutral-800: 240 4% 16%;
+  --clr-neutral-900: 240 6% 10%;
+  --clr-neutral-950: 240 10% 4%;
+}
+
+:root {
+  /* Text Size tokens */
+  --fs-50: 0.75rem/1rem "Inter", sans-serif "Inter", sans-serif; /* 12px */
+  --fs-100: 0.875rem/1.25rem "Inter", sans-serif; /* 14px */
+  --fs-200: 1rem/1.5rem "Inter", sans-serif; /* 16px */
+  --fs-300: 1.125rem/1.75rem "Inter", sans-serif; /* 18px */
+  --fs-400: 1.25rem/1.75rem "Inter", sans-serif; /* 20px */
+  --fs-500: 1.5rem/2rem "Inter", sans-serif; /* 24px */
+  --fs-600: 1.875rem/2.25rem "Inter", sans-serif; /* 30px */
+  --fs-700: 2.25rem/2.5rem "Inter", sans-serif; /* 36px */
+  --fs-800: 3rem/3.5rem "Inter", sans-serif; /* 48px */
+}
+
+:root {
+  /* Spacing tokens */
+  --space-1: 4px;
+  --space-2: 6px;
+  --space-3: 8px;
+  --space-4: 10px;
+  --space-5: 12px;
+  --space-6: 14px;
+  --space-7: 16px;
+  --space-8: 20px;
+  --space-9: 24px;
+  --space-10: 28px;
+  --space-11: 32px;
+  --space-12: 36px;
+  --space-13: 40px;
+  --space-14: 44px;
+  --space-15: 48px;
+  --space-16: 56px;
+  --space-17: 64px;
+  --space-18: 80px;
+  --space-19: 96px;
+  --space-20: 112px;
+  --space-21: 120px;
+  --space-22: 128px;
+  --space-23: 144px;
+  --space-24: 160px;
+  --space-25: 168px;
+}
+:root {
+  /* Border radii tokens */
+  --border-radius-1: var(--space-5);
+  --border-radius-2: var(--space-9);
+}
