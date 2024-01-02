@@ -25,6 +25,10 @@
   font: var(--fs-200);
 }
 
+.text-4xl {
+  font: var(--fs-600);
+}
+
 .text-5xl {
   font: var(--fs-700);
 }
@@ -32,6 +36,10 @@
 @media screen and (min-width: 64rem) {
   .text-sm {
     font: var(--fs-100);
+  }
+
+  .text-4xl {
+    font: var(--fs-700);
   }
 
   .text-5xl {

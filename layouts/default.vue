@@ -3,6 +3,8 @@
     <PrimaryHeader />
 
     <slot />
+
+    <Footer />
   </div>
 </template>
 

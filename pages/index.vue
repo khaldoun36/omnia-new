@@ -95,6 +95,23 @@
       </div>
     </div>
   </section>
+  <section class="testimonials" v-if="isVissible">
+    <h2 class="text-4xl font-bold text-darker">
+      See what the people are saying
+    </h2>
+    <TestimonialCarousel :data="testimonilas" />
+  </section>
+  <section class="call-to-action">
+    <div class="v-stack cta">
+      <h2 class="text-4xl font-bold text-darker">
+        Do you have a question I didn't answer?
+      </h2>
+      <p class="text-base text-dark">
+        Reach out, and I'll promptly address your inquiries.
+      </p>
+      <ButtonBase variant="primary" class="cta-btn">schedule a call</ButtonBase>
+    </div>
+  </section>
 </template>
 
 <script setup>
@@ -102,6 +119,19 @@
   import circleCheck from "../assets/icons/circle-check-regular.svg";
 
   import packages from "../assets/packages.js";
+  import testimonilas from "~/assets/Testimonilas";
+
+  let isVissible = ref(false);
+
+  onMounted(() => {
+    let screenWidth = window.innerWidth;
+
+    if (screenWidth >= 1024) {
+      isVissible.value = true;
+    } else {
+      isVissible.value = false;
+    }
+  });
 </script>
 
 <style scoped>
@@ -175,6 +205,21 @@
     width: var(--space-8);
     height: var(--space-8);
     margin-top: 3px;
+  }
+
+  .testimonials {
+    margin-top: var(--space-17);
+  }
+
+  .testimonials > h2 {
+    text-align: center;
+  }
+
+  .cta {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--space-17);
   }
 
   @media screen and (min-width: 64rem) {
