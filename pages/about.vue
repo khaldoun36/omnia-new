@@ -54,11 +54,12 @@
 
       <div class="h-stack" style="--h-gap: var(--space-5)">
         <img :src="emailIcon" alt="Email icon" class="icon" />
-        <a
-          href="mailto:omnia.samfoulkes@gmail.com"
+        <NuxtLink
+          to="mailto:omnia.samfoulkes@gmail.com"
           target="_blank"
+          rel="noopener"
           class="text-xs text-dark"
-          >omnia.samfoulkes@gmail.com</a
+          >omnia.samfoulkes@gmail.com</NuxtLink
         >
         <div class="spacer"></div>
       </div>
