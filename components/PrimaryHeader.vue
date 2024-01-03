@@ -130,6 +130,7 @@
     .fixed-header::after {
       background: transparent;
       backdrop-filter: blur(0);
+      position: static;
     }
 
     .navbar {
