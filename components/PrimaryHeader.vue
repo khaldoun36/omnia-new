@@ -4,25 +4,14 @@
       <img :src="Logo" alt="Logo" class="logo" />
 
       <nav class="navbar" :class="{ active: isExpanded }">
-        <NuxtLink to="/" class="nav-link btn text-sm font-semibold text-darker">
-          Home</NuxtLink
-        >
         <NuxtLink
-          to="/about"
+          v-for="link in links"
+          :key="link.text"
+          :to="link.path"
           class="nav-link btn text-sm font-semibold text-darker"
         >
-          About me</NuxtLink
-        >
-        <NuxtLink
-          to="/insights"
-          class="nav-link btn text-sm font-semibold text-darker"
-          >Insights</NuxtLink
-        >
-        <NuxtLink
-          to="/resources"
-          class="nav-link btn text-sm font-semibold text-darker"
-          >Free resources</NuxtLink
-        >
+          {{ link.text }}
+        </NuxtLink>
       </nav>
       <ButtonBase variant="secondary">Hello world</ButtonBase>
 
@@ -45,6 +34,13 @@
   const toggleDrawer = () => {
     isExpanded.value = !isExpanded.value;
   };
+
+  const links = [
+    { text: "Home", path: "/" },
+    { text: "About me", path: "/about" },
+    { text: "Insights", path: "/insights" },
+    { text: "Free resources", path: "/resources" },
+  ];
 </script>
 
 <style scoped>
