@@ -15,6 +15,8 @@
     <Vue3Marquee :duration="30" class="marquee full-width">
       <NuxtImg
         class="carousel-img"
+        width="1080"
+        height="1080"
         v-for="n in 8"
         :key="n"
         :src="`client-images/client-photo-${n}.jpeg`"
