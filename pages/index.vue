@@ -302,7 +302,7 @@
   /* client images start */
   .carousel-img {
     width: 240px;
-    aspect-ratio: 1;
+    height: 240px;
     border-radius: var(--border-radius-1);
   }
 
@@ -342,7 +342,7 @@
     /* client images start */
     .carousel-img {
       width: 300px;
-      aspect-ratio: 1;
+      height: 300px;
       border-radius: var(--border-radius-1);
     }
     /* client images end */
